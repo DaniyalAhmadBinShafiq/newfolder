@@ -22,7 +22,7 @@ function App() {
       <main>
         <h1>Test Widget Website</h1>
         <div className="content-box">
-          <p>Test your widget here</p>
+          <p>Test widget always here</p>
           <div className="neon-bar" />
         </div>
       </main>
