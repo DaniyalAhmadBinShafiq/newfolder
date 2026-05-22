@@ -1,0 +1,143 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.graphic-ring {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 2px solid rgba(0, 255, 200, 0.3);
+  border-radius: 50%;
+  top: 15%;
+  left: 10%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.graphic-ring--alt {
+  width: 180px;
+  height: 180px;
+  top: auto;
+  bottom: 20%;
+  right: 12%;
+  left: auto;
+  border-color: rgba(255, 0, 200, 0.25);
+  animation-delay: 1s;
+}
+
+.graphic-dots {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  right: 8%;
+  opacity: 0.4;
+}
+
+.graphic-dots span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00ffc8;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ffc8;
+}
+
+.graphic-dots span:nth-child(1) {
+  top: 0;
+  left: 50%;
+}
+.graphic-dots span:nth-child(2) {
+  top: 50%;
+  right: 0;
+}
+.graphic-dots span:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+}
+.graphic-dots span:nth-child(4) {
+  top: 50%;
+  left: 0;
+}
+.graphic-dots span:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.graphic-line {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff00c8, transparent);
+  box-shadow: 0 0 20px #ff00c8;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 520px;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: #111;
+  text-shadow:
+    0 0 10px rgba(0, 255, 200, 0.6),
+    0 0 30px rgba(0, 255, 200, 0.3),
+    0 0 50px rgba(255, 0, 200, 0.2);
+  margin: 0 0 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.content-box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    0 0 40px rgba(0, 255, 200, 0.08),
+    inset 0 0 60px rgba(255, 0, 200, 0.03);
+}
+
+.content-box p {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0, 255, 200, 0.25);
+}
+
+.neon-bar {
+  width: 80px;
+  height: 3px;
+  margin: 1.25rem auto 0;
+  background: linear-gradient(90deg, #00ffc8, #ff00c8);
+  border-radius: 2px;
+  box-shadow:
+    0 0 15px #00ffc8,
+    0 0 25px #ff00c8;
+}
